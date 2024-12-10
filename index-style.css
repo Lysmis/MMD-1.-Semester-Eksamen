@@ -28,12 +28,12 @@ body {
 }
 
 .menu h2 {
-	margin: 20px;
+	margin-top: 10px;
 }
 
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
-	padding: 10px;
+	padding: 5px;
 	text-decoration: none; /* Fjern understregning fra links */
 	color:black;
 }
