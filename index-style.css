@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+margin: 0;
+}
+
+body {
+	background-image: url("img/Background clean sign.png");; 
+	background-repeat: no-repeat;
+	background-size: auto 100vh;
+	background-position: left top;
+}
+
+.perspective-menu {
+	perspective: 110vh; /* Juster perspektivet */
+	position:absolute;
+	top:24vh;
+	margin-left: 9vh;
+	
+}
+
+.menu {
+	width: 36vh;
+	height: 52vh;
+	background-color: rgba(255, 255, 255, 0.8);
+	transform: rotateY(37deg) skewY(4.5deg);
+}
+
+.menu h2 {
+	margin: 20px;
+}
+
+.menu a {
+	display: block; /*menupunkterne står under hinanden*/
+	padding: 10px;
+	text-decoration: none; /* Fjern understregning fra links */
+	color:black;
+}
+
