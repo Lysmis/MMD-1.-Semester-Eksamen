@@ -9,32 +9,35 @@ body {
 	background-image: url("img/Background clean sign.png");; 
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
-	background-position: left top;
-}
+	background-position: left top;}
+
+.perspective-logo {
+	perspective: 50vh; /* Juster perspektivet */
+	position:absolute;
+	top: -4vh;
+	margin-left: 40vh;}
+.logo {
+	width: 75vh; /*baseret på skærmens højde*/
+	height: 45vh; /*baseret på skærmens højde*/
+	background-color: rgba(0,0,0,0); /*gennemsigtigt*/
+	transform: rotateY(-32deg) skewY(-26deg); /* Gør området skævt*/}
+
 
 .perspective-menu {
 	perspective: 110vh; /* Juster perspektivet */
 	position:absolute;
 	top:24vh;
-	margin-left: 9vh;
-	
-}
-
+	margin-left: 9vh;}
 .menu {
-	width: 36vh;
-	height: 52vh;
-	background-color: rgba(255, 255, 255, 0.8);
-	transform: rotateY(37deg) skewY(4.5deg);
-}
-
+	width: 36vh; /*baseret på skærmens højde*/
+	height: 52vh; /*baseret på skærmens højde*/
+	background-color: rgba(255, 255, 255, 0.8); /*gennemsigtigt*/
+	transform: rotateY(37deg) skewY(4.5deg); /* Gør området skævt*/ }
 .menu h2 {
-	margin-top: 10px;
-}
-
+	margin-top: 10px;}
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
 	padding: 5px;
 	text-decoration: none; /* Fjern understregning fra links */
-	color:black;
-}
+	color:black;}
 
