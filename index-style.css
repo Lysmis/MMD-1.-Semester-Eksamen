@@ -12,13 +12,13 @@
 	margin: 0;}
 
 body {
-	background-image: url("img/Background wide clean sign.png");
+	background-image: url("img/Labs Background Lightroom edit.jpg");
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
 	background-position: left top;}
 
 .perspective-logo {
-	perspective: 50vh; /* Juster perspektivet */
+	perspective: 40vh; /* Juster perspektivet */
 	position:absolute;
 	top: 1vh; margin-left: 54vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	}
 .logo {
@@ -54,7 +54,9 @@ body {
 	font-weight: 400;
 	text-align: left;
 	margin-left: 5vh;
-	Padding: 0.5vh;
-	
-	}
+	Padding: 0.5vh;}
 
+.audiocontrols {
+	position: absolute;
+	top: 85vh;
+}
