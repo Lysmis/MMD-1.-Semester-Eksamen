@@ -1,12 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+@font-face {
+	font-family: "Univers-UltraCondensed";
+	src: url("font/UniversLTStd-LightUltraCn.woff") format("woff");}
+@font-face {
+	font-family: "Univers";
+	src: url("font/UniversLTStd.woff");}
+
 * {
-margin: 0;
-}
+	margin: 0;}
 
 body {
-	background-image: url("img/Background clean sign.png");; 
+	background-image: url("img/Background wide clean sign.png");
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
 	background-position: left top;}
@@ -14,30 +20,41 @@ body {
 .perspective-logo {
 	perspective: 50vh; /* Juster perspektivet */
 	position:absolute;
-	top: -4vh;
-	margin-left: 40vh;}
+	top: 1vh; margin-left: 54vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	}
 .logo {
-	width: 75vh; /*baseret på skærmens højde*/
-	height: 45vh; /*baseret på skærmens højde*/
+	width: 60vh; height: 32vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
 	background-color: rgba(0,0,0,0); /*gennemsigtigt*/
-	transform: rotateY(-32deg) skewY(-26deg); /* Gør området skævt*/}
+	transform: rotateY(-25deg) skewY(-25deg); /* Gør området skævt*/}
 
 
 .perspective-menu {
 	perspective: 110vh; /* Juster perspektivet */
 	position:absolute;
-	top:24vh;
-	margin-left: 9vh;}
+	top:17vh;  /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	margin-left: 9.3vh;}
 .menu {
-	width: 36vh; /*baseret på skærmens højde*/
-	height: 52vh; /*baseret på skærmens højde*/
-	background-color: rgba(255, 255, 255, 0.8); /*gennemsigtigt*/
-	transform: rotateY(37deg) skewY(4.5deg); /* Gør området skævt*/ }
-.menu h2 {
-	margin-top: 10px;}
+	width: 38vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	height: 55vh;
+	background-color: rgba(255,255,255,0); /*gennemsigtigt*/
+	transform: rotateY(37deg) skewY(4.5deg); /* Gør området skævt*/ 
+	}
+
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
-	padding: 5px;
 	text-decoration: none; /* Fjern understregning fra links */
 	color:black;}
+.menu h2 {
+	font-family: "Univers-UltraCondensed";
+	font-size: 25vh;
+	font-weight: 400;
+	text-align: center;}
+.menu h5 {
+	font-family: "Univers";
+	font-size:3.7vh;
+	font-weight: 400;
+	text-align: left;
+	margin-left: 5vh;
+	Padding: 0.5vh;
+	
+	}
 
