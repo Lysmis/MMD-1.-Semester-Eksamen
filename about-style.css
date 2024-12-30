@@ -21,9 +21,9 @@
 	margin: 0;}
 
 body {
-	background-image: url("img/Ratman_Den2.webp");
+	background-image: url("img/about Background.png");
 	background-repeat: no-repeat;
-	background-size: auto 100vh;
+	background-size: auto 130vh;
 	background-position: left top;}
 
 h5 {
@@ -34,3 +34,9 @@ h5 {
 	margin-left: 5vh;
 	Padding: 0.5vh;
 	color:black;}
+
+
+@media (orientation:portrait){
+	body {
+		background-size: auto 100vh;}
+}
