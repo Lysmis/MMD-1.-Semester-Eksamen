@@ -22,33 +22,43 @@ body {
 	background-color:rgba(55,70,73,1.00); /* Blå-Grå fallback */
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
+	background-min-width: 100vw;
 	background-position: left top;
+	
 }
 
+/* Overlay */
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  font-size: 2rem;
-  z-index: 10;
-  cursor: pointer;
+	position: fixed;
+	top: 4vh;
+	left: 2vw;
+	width: 96vw;
+	height: 92vh;
+    background: linear-gradient(0deg, rgba(50, 50, 50), rgba(200, 200, 200), rgba(255, 255, 255),rgba(255, 255, 255), rgba(200, 200, 200), rgba(50, 50, 50));
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    z-index: 10;
+    cursor: pointer;  
+    opacity: 1; /* Synligt ved start */
+    transition: opacity 0.5s ease-out; /* Overgangseffekt */
 }
-
-.overlay p {
-  margin: 0;
-  text-align: center;
+.start-image {
+    width: auto; /* Behold aspect ratio */
+    height: auto; 
+    max-width: 85vw; 
+    max-height: 85vh; 
 }
-
+.overlay.hidden {
+    opacity: 0; /* Gør elementet usynligt */
+    pointer-events: none; /* Gør det ikke-interaktivt efter fade-out */
+}
 .captions-box {
-  display: none; /* Skjult indtil lyden starter */
+    display: none; /* Skjult indtil lyden starter */
 }
 
 /* Logo */
@@ -68,7 +78,6 @@ body {
 	perspective: 110vh; /* Juster perspektivet */
 	position:absolute;
 	top:17vh; margin-left: 9.3vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	
 }
 .menu {
 	width: 38vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
@@ -76,7 +85,6 @@ body {
 	background-color: rgba(255,255,255,0); /*gennemsigtigt*/
 	transform: rotateY(37deg) skewY(4.5deg); /* Gør området skævt*/ 
 }
-
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
 	text-decoration: none; /* Fjern understregning fra links */
@@ -103,21 +111,18 @@ body {
   align-items: center;
   gap: 10px;
 }
-
 button {
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
 }
-
 button img {
   width: 30px;
   height: 30px;
 }
-
 input[type="range"] {
-  width: 150px;
+  width: 100px;
   height: 5px;
   background: #ccc;
   border-radius: 5px;
@@ -133,7 +138,6 @@ input[type="range"] {
 	top: 85vh;
     margin: 0;
     }
-
 .captions {
     position: relative;
     width: 100vw;
@@ -143,8 +147,6 @@ input[type="range"] {
     align-items: center; /* Centrerer vertikalt */
     height: 100%; /* Sørger for, at det udfylder hele .captions-box */
     }
-
-
 .caption {	
 	font-family: "Univers", Arial, sans-serif;
 	font-size: 1rem;
@@ -158,15 +160,12 @@ input[type="range"] {
     position: absolute;
 	animation: fadeInOut 20s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
     }
-
-  .caption:nth-child(1) {animation-delay: 5s; }
-  .caption:nth-child(2) {animation-delay: 30s; }
-  .caption:nth-child(3) {animation-delay: 55s; }
-  .caption:nth-child(4) {animation-delay: 80s; }
+.caption:nth-child(1) {animation-delay: 5s; }
+.caption:nth-child(2) {animation-delay: 30s; }
+.caption:nth-child(3) {animation-delay: 55s; }
+.caption:nth-child(4) {animation-delay: 80s; }
 
 /* Animation */
 @keyframes fadeInOut {
-	10%, 90% {
-      opacity: 1; /*er fuldt synlig, fra 0% og mod 100% fader den fra og til den angivne opacity 0*/
-      }
+	10%, 90% {opacity: 1;} /*er fuldt synlig, fra 0% og mod 100% fader den fra og til den angivne opacity 0*/
     }
