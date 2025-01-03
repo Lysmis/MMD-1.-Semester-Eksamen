@@ -25,6 +25,32 @@ body {
 	background-position: left top;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.overlay p {
+  margin: 0;
+  text-align: center;
+}
+
+.captions-box {
+  display: none; /* Skjult indtil lyden starter */
+}
+
 /* Logo */
 .perspective-logo {
 	perspective: 40vh; /* Juster perspektivet */
