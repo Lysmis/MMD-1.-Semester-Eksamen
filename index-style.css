@@ -18,7 +18,7 @@
 
 /* Body styling */
 body {
-	background-image: url("img/Labs Background Lightroom edit.jpg");
+	background-image: url("img/index Background Help.jpg");
 	background-color:rgba(55,70,73,1.00); /* Blå-Grå fallback */
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
@@ -80,8 +80,7 @@ body {
 	top:17vh; margin-left: 9.3vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
 }
 .menu {
-	width: 38vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	height: 55vh;
+	width: 38vh; height: 55vh;/*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
 	background-color: rgba(255,255,255,0); /*gennemsigtigt*/
 	transform: rotateY(37deg) skewY(4.5deg); /* Gør området skævt*/ 
 }
@@ -95,6 +94,7 @@ body {
 	font-size: 25vh;
 	font-weight: 400;
 	text-align: center;
+	margin-bottom: 3vh;
 }
 .menu h5 {
 	font-family: "Univers";
@@ -169,3 +169,24 @@ input[type="range"] {
 @keyframes fadeInOut {
 	10%, 90% {opacity: 1;} /*er fuldt synlig, fra 0% og mod 100% fader den fra og til den angivne opacity 0*/
     }
+
+/*
+@media (orientation:portrait){
+	body {
+		background-size: auto 100vh;}
+	.perspective-logo {
+		perspective: 40vh; 
+		position:absolute;
+		top: 1vh; margin-left: 54vh;}
+	.logo {
+		width: 60vh; height: 32vh;}
+	.perspective-menu {
+		perspective: 110vh;
+		position:absolute;
+		top:17vh;
+		margin-left: 9.3vh;}
+	.menu {
+		width: 38vh; height: 55vh;}	
+}
+*/
+
