@@ -22,12 +22,11 @@ body {
 	background-color:rgba(55,70,73,1.00); /* Blå-Grå fallback */
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
-	background-min-width: 100vw;
 	background-position: left top;
 	
 }
 
-/* Overlay */
+/* Start-knap */
 .overlay {
 	position: fixed;
 	top: 4vh;
@@ -57,9 +56,6 @@ body {
     opacity: 0; /* Gør elementet usynligt */
     pointer-events: none; /* Gør det ikke-interaktivt efter fade-out */
 }
-.captions-box {
-    display: none; /* Skjult indtil lyden starter */
-}
 
 /* Logo */
 .perspective-logo {
@@ -82,7 +78,7 @@ body {
 .menu {
 	width: 38vh; height: 55vh;/*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
 	background-color: rgba(255,255,255,0); /*gennemsigtigt*/
-	transform: rotateY(37deg) skewY(4.5deg); /* Gør området skævt*/ 
+	transform: rotateY(37deg) skewY(5.5deg); /* Gør området skævt*/ 
 }
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
@@ -94,7 +90,7 @@ body {
 	font-size: 25vh;
 	font-weight: 400;
 	text-align: center;
-	margin-bottom: 3vh;
+	margin-bottom: 1vh;
 }
 .menu h5 {
 	font-family: "Univers";
@@ -105,88 +101,32 @@ body {
 	padding: 0.5vh;
 }
 
-/* Audio controls */
+/* Audio controls placering */
 .audio-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-button img {
-  width: 30px;
-  height: 30px;
-}
-input[type="range"] {
-  width: 100px;
-  height: 5px;
-  background: #ccc;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
+  	margin-left: 5vh;
+	margin-top: 1vh;
 }
 
-/* Captions */
-.captions-box {
-    display: flex;
-    height: 13vh;
-	position: absolute;
-	top: 85vh;
-    margin: 0;
-    }
-.captions {
-    position: relative;
-    width: 100vw;
-    text-align: center;
-    display: flex; /* Gør det til en flex-container */
-    justify-content: center; /* Centrerer horisontalt */
-    align-items: center; /* Centrerer vertikalt */
-    height: 100%; /* Sørger for, at det udfylder hele .captions-box */
-    }
-.caption {	
-	font-family: "Univers", Arial, sans-serif;
-	font-size: 1rem;
-	color:rgba(200,0,0,1.00);
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
-    border-radius: 1px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
-	padding: 6px 40px; /*baggrundsfarven strækker sig 5px fra top og bund og 30px til siderne*/
-	text-align: center; /* Centrerer teksten inde i hver caption */
-    opacity: 0;
-    position: absolute;
-	animation: fadeInOut 20s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
-    }
-.caption:nth-child(1) {animation-delay: 5s; }
-.caption:nth-child(2) {animation-delay: 30s; }
-.caption:nth-child(3) {animation-delay: 55s; }
-.caption:nth-child(4) {animation-delay: 80s; }
 
-/* Animation */
-@keyframes fadeInOut {
-	10%, 90% {opacity: 1;} /*er fuldt synlig, fra 0% og mod 100% fader den fra og til den angivne opacity 0*/
-    }
+/* Captions timing */
+.caption:nth-child(1) {animation-delay: 3s; }
+.caption:nth-child(2) {animation-delay: 25s; }
+.caption:nth-child(3) {animation-delay: 50s; }
+.caption:nth-child(4) {animation-delay: 75s; }
+.caption:nth-child(5) {animation-delay: 90s; }
+.caption:nth-child(6) {animation-delay: 110s; }
 
-/*
+
 @media (orientation:portrait){
 	body {
-		background-size: auto 100vh;}
+		background-image: url("img/index Background Help portrait.jpg");}
 	.perspective-logo {
-		perspective: 40vh; 
-		position:absolute;
-		top: 1vh; margin-left: 54vh;}
+		perspective: 30vh; 
+		top: 10vh; margin-left: 46vh;}
 	.logo {
-		width: 60vh; height: 32vh;}
+		width: 36vh; height: 25vh;
+		transform: rotateY(-25deg) skewY(-30deg);}
 	.perspective-menu {
-		perspective: 110vh;
-		position:absolute;
 		top:17vh;
-		margin-left: 9.3vh;}
-	.menu {
-		width: 38vh; height: 55vh;}	
+		margin-left: 2vh;}
 }
-*/
-

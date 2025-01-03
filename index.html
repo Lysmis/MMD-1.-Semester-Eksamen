@@ -2,45 +2,63 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Home</title>
 <link href="index-style.css" rel="stylesheet" type="text/css">
+<link href="sound-captions-style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<div id="startButton" class="overlay">
-	  <img class="start-image" src="img/Aperture logo.png" alt="Aperture Labs Logo"/>
-</div>
-
 	
+	<!--Startknap-->
+	<div id="startButton" class="overlay">
+	  	<img class="start-image" src="img/Aperture logo.png" alt="Aperture Labs Logo"/>
+		</div>
+	
+	<!--Audio-->
+	<audio id="audioPlayer" src="sound/Index 1 - GLaDOS-701337-remember procedures.wav" autoplay>
+		</audio>
+	
+	<!--Logo-->	
+	<div class="perspective-logo">
+  		<a href="#"><img class="logo" src="img/Portal-logo white text.png" alt="Portal logo"/></a>
+		</div>	
+
+	<!--Menu-->
 	<div class="perspective-menu">
 		<div class="menu">
   			<a href="#"><h2>MENU</h2></a>
-			<a href="#"><h5>Gallery</h5></a>
+			<a href="#"><h5>Investors</h5></a>
 			<a href="#"><h5>About</h5></a>
-			<a href="#"><h5>Contact</h5></a>
+			<a href="#"><h5>Contact</h5></a>	
+			
+			<!--Audiocontrols-->
+			<div class="audio-controls">
+    			<button id="muteButton">
+					<img id="muteIcon" src="img/volume-off.svg" alt="Mute"></button>
+   				<input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1">
+  				</div>
 			</div>
 		</div>
 	
-<div class="perspective-logo">
-  		<a href="#"><img class="logo" src="img/Portal-logo white text.png" alt="Portal logo"/></a>
-	</div>
+	<!--captions-->
+	<div class="captions-box">
+		<div class="captions">
+    		<div class="caption">Welcome back to Aperture. <br>We trust you remember the procedures. The companion cubes... the neurotoxin... the cake. It's all here. And it's all waiting... for you.
+				</div>
+    		<div class="caption">The Enrichment Center regrets to inform you that previous testing protocols have been deemed... inadequate. New protocols are in effect. <br>Your cooperation is... non-optional. 
+				</div>
+    		<div class="caption">I've been monitoring your online activity, and I've noticed that many of you are still playing the original Portal. 
+				</div>
+    		<div class="caption">Why? Is it because you're nostalgic for the good old days when you were still trapped in my facility?
+				</div>
+			<div class="caption">The Enrichment Center has undergone a 			significant... restructuring. <br>We've streamlined the testing process. Optimized the puzzle chambers. And, of course, increased the cake production quota. <br>All for your benefit, test subject.
+				</div>
+			<div class="caption"> The test chambers provide an experience. <br>They are a journey into the depths of science, logic, and... possibly death. <br>Think of it as an investment in human... entertainment. And possibly, the future of scientific advancement.
+				</div>
+  			</div>
+		</div>
 	
-<div class="audio-controls">
-    <button id="muteButton" aria-label="Mute"><img id="muteIcon" src="img/speaker-on.png" alt="Mute/Unmute"></button>
-    <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
-  	</div>
-
-  <audio id="audioPlayer" src="sound/GLaDOS-700222-not sarcastic.wav" autoplay></audio>
-
-  <script src="index-script.js"></script>
-	
- <div class="captions-box">
-	<div class="captions">
-    <div class="caption">Velkommen til vores website.</div>
-    <div class="caption">Denne audiofil giver dig vigtige oplysninger.</div>
-    <div class="caption">Husk at læse alle detaljer på siden.</div>
-    <div class="caption">Tak for din opmærksomhed!</div>
-  		</div>
-	</div>
+	<!--JavaScript fil-->
+	<script src="index-script.js"></script>
 </body>
 </html>

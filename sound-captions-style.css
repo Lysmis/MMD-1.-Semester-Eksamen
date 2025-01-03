@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* Audio controls */
+.audio-controls {
+  	display: flex;
+ 	align-items: center;
+  	gap: 10px;
+}
+button {
+  	background: none;
+  	border: none;
+  	cursor: pointer;
+  	outline: none;
+}
+button img {
+  	width: 30px;
+  	height: 30px;
+}
+input[type="range"] {
+  	width: 20vh;
+  	height: 1vh;
+  	background: #ccc;
+  	border-radius: 5px;
+  	outline: none;
+  	cursor: pointer;
+}
+
+/* Captions */
+.captions-box {
+	display: flex;
+	flex-direction: column;
+  	justify-content: center;
+ 	align-items: center;
+    height: 13vh;
+	position: absolute;
+	top: 85vh;
+    margin: 0;
+    }
+.captions {
+    position: relative;
+    width: 100vw;
+    text-align: center;
+    display: flex; /* Gør det til en flex-container */
+    justify-content: center; /* Centrerer horisontalt */
+    align-items: center; /* Centrerer vertikalt */
+    height: 100%; /* Sørger for, at det udfylder hele .captions-box */
+    }
+.caption {	
+	font-family: "Univers", Arial, sans-serif;
+	font-size: 1.2rem;
+	color:rgba(200,0,0,1.00);
+	background: rgba(0, 0, 0, 0.7);
+    border-radius: 1px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+	padding: 8px 40px; /*baggrundsfarven strækker sig 5px fra top og bund og 30px til siderne*/
+	text-align: center; /* Centrerer teksten inde i hver caption */
+    opacity: 0;
+	position: absolute;
+}
+.captions-box.play-captions .caption {
+  animation: fadeInOut 15s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
+}
+
+/* Animation */
+@keyframes fadeInOut {
+	10%, 90% {opacity: 1;} /*er fuldt synlig*/
+	0%, 100% {opacity: 0;} /*er usynlig*/
+    }
