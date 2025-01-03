@@ -7,11 +7,15 @@
 </head>
 
 <body>
-	<div class="audiocontrols">	
-		<audio controls>
-  		<source src="GLaDOS Soundbites/GLaDOS-701313-Require Funding.wav" type="audio/Wav">
-		Your browser does not support the audio element. <!--Vises hvis Audiofilen ikke virker i en browser-->
-		</audio></div>
+	<div class="audio-controls">
+    <button id="muteButton" aria-label="Mute"><img id="muteIcon" src="img/speaker-on.png" alt="Mute/Unmute"></button>
+    <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+  </div>
+
+  <audio id="audioPlayer" src="path-to-audio.mp3" autoplay></audio>
+
+  <script src="index-script.js"></script>
+
 	
 	<div class="perspective-menu">
 		<div class="menu">

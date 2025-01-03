@@ -1,111 +1,146 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Fonts */
 @font-face {
 	font-family: "Univers-UltraCondensed";
-	src: url("font/UniversLTStd-LightUltraCn.woff") format("woff");}
+	src: url("font/UniversLTStd-LightUltraCn.woff") format("woff");
+}
 @font-face {
 	font-family: "Univers";
-	src: url("font/UniversLTStd.woff");}
+	src: url("font/UniversLTStd.woff");
+}
 
+/* Reset */
 * {
-	margin: 0;}
+	margin: 0;
+}
 
+/* Body styling */
 body {
 	background-image: url("img/Labs Background Lightroom edit.jpg");
+	background-color:rgba(55,70,73,1.00); /* Blå-Grå fallback */
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
-	background-position: left top;}
+	background-position: left top;
+}
 
+/* Logo */
 .perspective-logo {
 	perspective: 40vh; /* Juster perspektivet */
 	position:absolute;
-	top: 1vh; margin-left: 54vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	}
+	top: 1vh; margin-left: 54vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	
+}
 .logo {
 	width: 60vh; height: 32vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
 	background-color: rgba(0,0,0,0); /*gennemsigtigt*/
-	transform: rotateY(-25deg) skewY(-25deg); /* Gør området skævt*/}
+	transform: rotateY(-25deg) skewY(-25deg); /* Gør området skævt*/
+}
 
-
+/* Menu */
 .perspective-menu {
 	perspective: 110vh; /* Juster perspektivet */
 	position:absolute;
-	top:17vh;  /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	margin-left: 9.3vh;}
+	top:17vh; margin-left: 9.3vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	
+}
 .menu {
 	width: 38vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
 	height: 55vh;
 	background-color: rgba(255,255,255,0); /*gennemsigtigt*/
 	transform: rotateY(37deg) skewY(4.5deg); /* Gør området skævt*/ 
-	}
+}
 
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
 	text-decoration: none; /* Fjern understregning fra links */
-	color:black;}
+	color:black;
+}
 .menu h2 {
 	font-family: "Univers-UltraCondensed";
 	font-size: 25vh;
 	font-weight: 400;
-	text-align: center;}
+	text-align: center;
+}
 .menu h5 {
 	font-family: "Univers";
 	font-size:3.7vh;
 	font-weight: 400;
 	text-align: left;
 	margin-left: 5vh;
-	Padding: 0.5vh;}
-
-.audiocontrols {
-	position: absolute;
-	top: 85vh;
+	padding: 0.5vh;
 }
 
+/* Audio controls */
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+input[type="range"] {
+  width: 150px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Captions */
 .captions-box {
-	font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25vh;
+    height: 13vh;
 	position: absolute;
-	top: 65vh;
-    background-color: #f0f0f0;
+	top: 85vh;
     margin: 0;
     }
 
 .captions {
     position: relative;
-    width: 95vw;
-    max-width: 100vw;
+    width: 100vw;
     text-align: center;
-    font-size: 1.5rem;
-    color: #333;
+    display: flex; /* Gør det til en flex-container */
+    justify-content: center; /* Centrerer horisontalt */
+    align-items: center; /* Centrerer vertikalt */
+    height: 100%; /* Sørger for, at det udfylder hele .captions-box */
     }
 
-.caption {
-    opacity: 1;
+
+.caption {	
+	font-family: "Univers", Arial, sans-serif;
+	font-size: 1rem;
+	color:rgba(200,0,0,1.00);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    border-radius: 1px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+	padding: 6px 40px; /*baggrundsfarven strækker sig 5px fra top og bund og 30px til siderne*/
+	text-align: center; /* Centrerer teksten inde i hver caption */
+    opacity: 0;
     position: absolute;
-    animation: fadeInOut 3s linear infinite;
+	animation: fadeInOut 20s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
     }
 
-  .caption:nth-child(1) {
-      animation-delay: 0s;
-    }
-  .caption:nth-child(2) {
-      animation-delay: 3s;
-    }
-  .caption:nth-child(3) {
-      animation-delay: 6s;
-    }
-  .caption:nth-child(4) {
-      animation-delay: 9s;
-    }
+  .caption:nth-child(1) {animation-delay: 5s; }
+  .caption:nth-child(2) {animation-delay: 30s; }
+  .caption:nth-child(3) {animation-delay: 55s; }
+  .caption:nth-child(4) {animation-delay: 80s; }
 
+/* Animation */
 @keyframes fadeInOut {
-    0%, 100% {
-      opacity: 0;
-      }
-    100%, 0% {
-      opacity: 1;
+	10%, 90% {
+      opacity: 1; /*er fuldt synlig, fra 0% og mod 100% fader den fra og til den angivne opacity 0*/
       }
     }
