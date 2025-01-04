@@ -6,7 +6,7 @@
 .audio-controls {
   	display: flex;
  	align-items: center;
-  	gap: 10px;
+  	gap: 1vh;
 }
 button {
   	background: none;
@@ -15,14 +15,14 @@ button {
   	outline: none;
 }
 button img {
-  	width: 30px;
-  	height: 30px;
+  	width: 8vh;
+  	height: 8vh;
 }
 input[type="range"] {
   	width: 20vh;
   	height: 1vh;
-  	background: #ccc;
-  	border-radius: 5px;
+  	background:#ccc;
+  	border-radius: 0.1vh;
   	outline: none;
   	cursor: pointer;
 }
