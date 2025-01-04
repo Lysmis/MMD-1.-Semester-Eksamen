@@ -40,28 +40,44 @@ h5 {
 }
 .menu {
 	width: 50vh; height: 82vh;/*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	background-color: rgba(255,255,255,0.5); /*gennemsigtigt*/
-	transform: rotateY(28deg) skewY(1deg); /* Gør området skævt*/ 
+	background-color: rgba(255,255,255,0); /*gennemsigtigt*/
+	transform: rotateY(29deg) skewY(-3deg); /* Gør området skævt*/ 
 }
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
 	text-decoration: none; /* Fjern understregning fra links */
-	color:black;
+	color: rgba(0,0,0,0.75);
 }
 .menu h5 {
-	font-size:6vh;
+	font-size:9vh;
 	font-weight: 400;
-	text-align: left;
-	margin-left: 5vh;
-	padding: 0.5vh;
 }
+.home	{
+	margin-left: 2vh;
+	transform:   rotateZ(-15deg);
+}
+.investors	{
+	margin-left: 20vh;
+	margin-top: 2vh;
+	transform:  rotateX(30deg) rotateZ(25deg);
+}
+.contact	{
+	margin-left: 8vh;
+	transform:   rotateZ(8deg);
+}
+/* Audio controls placering */
+.audio-controls {
+  	margin-left: 7vh;
+	margin-top: 32vh;
+}
+
 .warning{
 	text-align: left;
 	Padding: 0.5vh;
-	color:antiquewhite;
+	color:rgba(255,0,5,0.60);
 	position: absolute;
-	top: 77vh; 
-	margin-left: 50vh;
+	top: 72vh; 
+	margin-left: 65vh;
 	perspective: 200vh;
 }
 .warning-text {
@@ -80,16 +96,25 @@ h5 {
 @media (orientation:portrait){
 	body {
 		background-size: auto 100vh;}
-	.warning{
-	text-align: left;
-	Padding: 0.5vh;
-	color:antiquewhite;
-	position: absolute;
-	top: 60vh; 
-	margin-left: 35vh;
-	perspective: 200vh;
+	
+	/* Menu */
+.perspective-menu {
+	top:4vh; margin-left: 2vh; 
 }
-.warning-text {
-	transform: rotateX(50deg) skewY(-20deg); /* Gør området skævt*/ 
+.menu {
+	width: 43vh; height: 62vh;
+	transform: rotateY(35deg) skewY(-1deg); /* Gør området skævt*/ 
 }
+.menu h5 {
+	font-size:7.5vh;
+	}
+.audio-controls {
+  	margin-left: 2vh;
+	margin-top: 20vh;
+}
+.warning{
+	top: 62vh; 
+	margin-left: 40vh;
+}
+
 }
