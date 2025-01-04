@@ -23,6 +23,8 @@ body {
 	background-repeat: no-repeat;
 	background-size: auto 100vh;
 	background-position: left top;
+	overflow: hidden; /* Skjul alt, der går uden for skærmen */
+  	height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
 	
 }
 
@@ -61,14 +63,18 @@ body {
 .perspective-logo {
 	perspective: 40vh; /* Juster perspektivet */
 	position:absolute;
-	top: 1vh; margin-left: 54vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	
+	top: 4vh; margin-left: 48vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	
 }
 .logo {
 	width: 60vh; height: 32vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
 	background-color: rgba(0,0,0,0); /*gennemsigtigt*/
 	transform: rotateY(-25deg) skewY(-25deg); /* Gør området skævt*/
 }
-
+#portal-logo{
+	width: 100%;
+	height: 100%;
+	transform:inherit;
+}
 /* Menu */
 .perspective-menu {
 	perspective: 110vh; /* Juster perspektivet */
@@ -101,7 +107,15 @@ body {
 	padding: 0.5vh;
 }
 
-/* Audio controls placering */
+/* Audio controls */
+button img {
+  	width: 6vh;
+  	height: 6vh;
+}
+input[type="range"] {
+  	width: 18vh;
+  	height: 1vh;
+}
 .audio-controls {
   	margin-left: 5vh;
 	margin-top: 1vh;
@@ -117,12 +131,12 @@ body {
 .caption:nth-child(6) {animation-delay: 110s; }
 
 
-@media (orientation:portrait){
+@media screen and (max-aspect-ratio:1){
 	body {
 		background-image: url("img/index Background Help portrait.jpg");}
 	.perspective-logo {
 		perspective: 30vh; 
-		top: 10vh; margin-left: 46vh;}
+		top: 11vh; margin-left: 44vh;}
 	.logo {
 		width: 36vh; height: 25vh;
 		transform: rotateY(-25deg) skewY(-30deg);}
