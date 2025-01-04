@@ -65,10 +65,18 @@ h5 {
 	margin-left: 8vh;
 	transform:   rotateZ(8deg);
 }
-/* Audio controls placering */
+/* Audio controls */
+button img {
+  	width: 8vh;
+  	height: 8vh;
+}
+input[type="range"] {
+  	width: 20vh;
+  	height: 1vh;
+}
 .audio-controls {
   	margin-left: 7vh;
-	margin-top: 32vh;
+	margin-top: 28vh;
 }
 
 .warning{
@@ -76,12 +84,12 @@ h5 {
 	Padding: 0.5vh;
 	color:rgba(255,0,5,0.60);
 	position: absolute;
-	top: 72vh; 
-	margin-left: 65vh;
+	top: 73vh; 
+	margin-left: 62vh;
 	perspective: 200vh;
 }
 .warning-text {
-	transform: rotateX(50deg) skewY(-20deg); /* Gør området skævt*/ 
+	transform: rotateX(50deg) skewY(-12deg); /* Gør området skævt*/ 
 }
 
 /* Captions timing */

@@ -14,13 +14,8 @@ button {
   	cursor: pointer;
   	outline: none;
 }
-button img {
-  	width: 8vh;
-  	height: 8vh;
-}
+
 input[type="range"] {
-  	width: 20vh;
-  	height: 1vh;
   	background:#ccc;
   	border-radius: 0.1vh;
   	outline: none;
@@ -35,12 +30,13 @@ input[type="range"] {
  	align-items: center;
     height: 13vh;
 	position: absolute;
-	top: 85vh;
+	top: 88vh;
+	left: 2vw;
     margin: 0;
     }
 .captions {
     position: relative;
-    width: 100vw;
+    width: 96vw;
     text-align: center;
     display: flex; /* Gør det til en flex-container */
     justify-content: center; /* Centrerer horisontalt */
@@ -49,7 +45,7 @@ input[type="range"] {
     }
 .caption {	
 	font-family: "Univers", Arial, sans-serif;
-	font-size: 1.2rem;
+	font-size: 3vh;
 	color:rgba(200,0,0,1.00);
 	background: rgba(0, 0, 0, 0.7);
     border-radius: 1px;
@@ -68,3 +64,13 @@ input[type="range"] {
 	10%, 90% {opacity: 1;} /*er fuldt synlig*/
 	0%, 100% {opacity: 0;} /*er usynlig*/
     }
+
+@media (orientation:portrait){
+
+.captions-box {
+	top: 85vh;
+  }
+.caption {	
+	font-size: 2.5vh;
+	}
+}
