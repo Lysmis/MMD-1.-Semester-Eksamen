@@ -1,0 +1,105 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Fonts */
+@font-face {
+	font-family: "Univers-UltraCondensed";
+	src: url("font/UniversLTStd-LightUltraCn.woff") format("woff");
+}
+@font-face {
+	font-family: "Univers";
+	src: url("font/UniversLTStd.woff");
+}
+
+/* Reset */
+* {
+	margin: 0;
+}
+
+/* Body styling */
+body {
+  background-image: url("img/investors Background.png");
+  background-color: rgba(55,70,73,1.00); /* Blå-Grå fallback */
+  background-repeat: no-repeat;
+  background-size: auto 100vh; /* Skaler kun i højden */
+  background-position: center center; /* Center billedet i både horisontal og vertikal retning */
+  overflow: hidden; /* Skjul alt, der går uden for skærmen */
+  height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
+}
+
+h2 {
+	font-family: "Univers-UltraCondensed";
+	font-size: 18vh;
+	font-weight: 400;
+	text-align: center;
+	Color: white;
+}
+
+/* Menu */
+.perspective-menu {
+	perspective: 20vw; /* Juster perspektivet */
+	position:absolute;
+	top:15vh; margin-left: 12vw;
+}
+.menu {
+	width: 22vh; height: 25vh;
+	background-color: rgba(55,70,73,1.00); 
+	border: 0.5vh solid white;
+	transform: rotateX(-10deg) rotateY(30deg) rotateZ(15deg) skewY(10.5deg);
+}
+.menu a {
+	display: block; /*menupunkterne står under hinanden*/
+	text-decoration: none;
+	color:white;
+}
+.menu h5 {
+	font-family: "Univers";
+	font-size:3.7vh;
+	font-weight: 400;
+	text-align: left;
+	margin-left: 3vh;
+	padding: 0.5vh;
+}
+
+/* Audio controls */
+.audio-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+button img {
+  	width: 6vh;
+  	height: 6vh;
+	filter: invert(1); /* Inverterer farven på mute-ikon så den bliver hvid */
+}
+input[type="range"] {
+  	width: 18vh;
+  	height: 1vh;
+}
+
+/* Captions timing */
+.caption:nth-child(1) {animation-delay: 0s; }
+.caption:nth-child(2) {animation-delay: 15s; }
+.caption:nth-child(3) {animation-delay: 30s; }
+.caption:nth-child(4) {animation-delay: 75s; }
+.caption:nth-child(5) {animation-delay: 90s; }
+.caption:nth-child(6) {animation-delay: 110s; }
+.caption:nth-child(7) {animation-delay: 110s; }
+
+@media screen and (max-aspect-ratio:4/3){
+		
+/* Menu */
+.perspective-menu {
+	perspective: 30vw;
+	top:28vh; margin-left: 6vw;
+}
+.menu {
+	width: 15vh; height: 19vh;
+	border: 0.3vh solid white;
+	transform: rotateX(0deg) rotateY(20deg) rotateZ(5deg) skewY(12deg);
+}
+.menu h5 {
+	font-size:3vh;
+	margin-left: 1vh;
+}
+}
