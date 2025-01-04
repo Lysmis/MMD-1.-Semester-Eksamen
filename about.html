@@ -4,11 +4,59 @@
 <meta charset="utf-8">
 <title>About</title>
 <link href="about-style.css" rel="stylesheet" type="text/css">
+<link href="sound-captions-style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+
+	<!--Audio-->
+	<audio id="audioPlayer" src="sound/Index 1 - GLaDOS-701337-remember procedures.wav" autoplay>
+		</audio>
 	
+	
+	<!--Menu-->
+	<div class="perspective-menu">
+		<div class="menu">
+  			<a href="#"><h5 class="home">Home</h5></a>
+			<a href="#"><h5 class="Investors">Investors</h5></a>
+			<a href="#"><h5 class="About">About</h5></a>
+			<a href="#"><h5 class="Contact">Contact</h5></a>
+			<br>
+
+			<!--Audiocontrols-->
+			<div class="audio-controls">
+    			<button id="muteButton">
+					<img id="muteIcon" src="img/volume-off.svg" alt="Mute"></button>
+   					<input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="1">
+  				</div>
+			</div>
+		</div>
 	<div class="warning">
-		<h5>Do not listen to her!!! it is a trap!!!</h5></div>
+		<div class="warning-text">
+			<h5>Do not listen to her!!! <br>
+			it is a trap!!!</h5>
+			</div>
+		</div>
+	
+	<!--captions-->
+	<div class="captions-box">
+		<div class="captions">
+    		<div class="caption">Welcome back to Aperture. <br>We trust you remember the procedures. The companion cubes... the neurotoxin... the cake. It's all here. And it's all waiting... for you.
+				</div>
+    		<div class="caption">The Enrichment Center regrets to inform you that previous testing protocols have been deemed... inadequate. New protocols are in effect. <br>Your cooperation is... non-optional. 
+				</div>
+    		<div class="caption">I've been monitoring your online activity, and I've noticed that many of you are still playing the original Portal. 
+				</div>
+    		<div class="caption">Why? Is it because you're nostalgic for the good old days when you were still trapped in my facility?
+				</div>
+			<div class="caption">The Enrichment Center has undergone a 			significant... restructuring. <br>We've streamlined the testing process. Optimized the puzzle chambers. And, of course, increased the cake production quota. <br>All for your benefit, test subject.
+				</div>
+			<div class="caption"> The test chambers provide an experience. <br>They are a journey into the depths of science, logic, and... possibly death. <br>Think of it as an investment in human... entertainment. And possibly, the future of scientific advancement.
+				</div>
+  			</div>
+		</div>
+	
+	<!--JavaScript fil-->
+	<script src="index-script.js"></script>
 </body>
 </html>

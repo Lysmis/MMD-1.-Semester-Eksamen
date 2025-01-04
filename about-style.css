@@ -30,13 +30,66 @@ h5 {
 	font-family: "wrong";
 	font-size:5vh;
 	font-weight: 400;
+}
+
+/* Menu */
+.perspective-menu {
+	perspective: 50vh; /* Juster perspektivet */
+	position:absolute;
+	top:8vh; margin-left: 6vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+}
+.menu {
+	width: 50vh; height: 82vh;/*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	background-color: rgba(255,255,255,0.5); /*gennemsigtigt*/
+	transform: rotateY(28deg) skewY(1deg); /* Gør området skævt*/ 
+}
+.menu a {
+	display: block; /*menupunkterne står under hinanden*/
+	text-decoration: none; /* Fjern understregning fra links */
+	color:black;
+}
+.menu h5 {
+	font-size:6vh;
+	font-weight: 400;
 	text-align: left;
 	margin-left: 5vh;
+	padding: 0.5vh;
+}
+.warning{
+	text-align: left;
 	Padding: 0.5vh;
-	color:black;}
+	color:antiquewhite;
+	position: absolute;
+	top: 77vh; 
+	margin-left: 50vh;
+	perspective: 200vh;
+}
+.warning-text {
+	transform: rotateX(50deg) skewY(-20deg); /* Gør området skævt*/ 
+}
+
+/* Captions timing */
+.caption:nth-child(1) {animation-delay: 3s; }
+.caption:nth-child(2) {animation-delay: 25s; }
+.caption:nth-child(3) {animation-delay: 50s; }
+.caption:nth-child(4) {animation-delay: 75s; }
+.caption:nth-child(5) {animation-delay: 90s; }
+.caption:nth-child(6) {animation-delay: 110s; }
 
 
 @media (orientation:portrait){
 	body {
 		background-size: auto 100vh;}
+	.warning{
+	text-align: left;
+	Padding: 0.5vh;
+	color:antiquewhite;
+	position: absolute;
+	top: 60vh; 
+	margin-left: 35vh;
+	perspective: 200vh;
+}
+.warning-text {
+	transform: rotateX(50deg) skewY(-20deg); /* Gør området skævt*/ 
+}
 }
