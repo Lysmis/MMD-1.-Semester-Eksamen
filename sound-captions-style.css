@@ -30,7 +30,7 @@ input[type="range"] {
  	align-items: center;
     height: 13vh;
 	position: absolute;
-	top: 88vh;
+	top: 87vh;
 	left: 2vw;
     margin: 0;
     }
@@ -65,12 +65,18 @@ input[type="range"] {
 	0%, 100% {opacity: 0;} /*er usynlig*/
     }
 
-@media (orientation:portrait){
-
-.captions-box {
-	top: 85vh;
-  }
+@media screen and (max-aspect-ratio:4/3){
+	
 .caption {	
 	font-size: 2.5vh;
-	}
+}
+}
+@media screen and (max-aspect-ratio:1){
+
+.captions-box {
+	top: 84vh;
+}
+.caption {	
+	font-size: 2.5vh;
+}
 }
