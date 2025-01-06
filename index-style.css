@@ -63,12 +63,12 @@ body {
 .perspective-logo {
 	perspective: 40vh; /* Juster perspektivet */
 	position:absolute;
-	top: 4vh; margin-left: 48vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	
+	top: 4vh; margin-left: 48vh; /*baseret på højde, da baggrund kun skallerer der*/	
 }
 .logo {
-	width: 60vh; height: 32vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	background-color: rgba(0,0,0,0); /*gennemsigtigt*/
-	transform: rotateY(-25deg) skewY(-25deg); /* Gør området skævt*/
+	width: 60vh; height: 32vh; 
+	background-color: rgba(0,0,0,0); 
+	transform: rotateY(-25deg) skewY(-25deg); 
 }
 #portal-logo{
 	width: 100%;

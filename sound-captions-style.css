@@ -56,7 +56,7 @@ input[type="range"] {
 	position: absolute;
 }
 .captions-box.play-captions .caption {
-  animation: fadeInOut 15s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
+  animation: fadeInOut 10s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
 }
 
 /* Animation */

@@ -34,7 +34,7 @@ body {
 }
 .contact {
 	width: 35vh; height: 53vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	background-color: rgba(255,0,0,0.0); /*gennemsigtigt*/
+	background-color: rgba(255,0,0,0); /*gennemsigtigt*/
 	transform: rotateY(-20deg) skewY(-7deg); /* Gør området skævt*/
 }
 .call, .mail, .socials {
@@ -91,6 +91,8 @@ h4 {
 }
 .menu {
 	width: 33vh; height: 46vh;/*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	background-image: url("img/Portal Gun.png");
+	background-size: cover;
 	background-color: rgba(255,255,255,0.7); /*gennemsigtigt*/
 	border: 0.5vh solid rgba(100,100,100,1.00);
 	transform: rotateY(15deg) skewY(0deg); /* Gør området skævt*/ 
@@ -101,7 +103,7 @@ h4 {
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
 	text-decoration: none; /* Fjern understregning fra links */
-	color:black;
+	color:white;
 }
 .menu h5 {
 	font-family: "Univers";
@@ -116,6 +118,7 @@ h4 {
 button img {
   	width: 6vh;
   	height: 6vh;
+	filter: invert(1); /* Inverterer farven på mute-ikon så den bliver hvid */
 }
 input[type="range"] {
   	width: 18vh;
@@ -123,7 +126,7 @@ input[type="range"] {
 }
 .audio-controls {
   	margin-left: 2vh;
-	margin-top: 5vh;
+	margin-top: 0vh;
 }
 
 
@@ -188,12 +191,12 @@ h4 {
 	transform: rotateY(15deg) skewY(0deg);
 }
 .menu-links{
-	margin-top: 3vw;
+	margin-top: 2vw;
 }	
 .menu h5 {
 	font-size:3vw;
 	margin-left: 3vw;
-	padding-bottom: 1vw;
+	padding-bottom: 0.5vw;
 }
 
 /* Audio controls */
@@ -207,6 +210,5 @@ input[type="range"] {
 }
 .audio-controls {
   	margin-left: 1vw;
-	margin-top: 0vw;
 }	
 }

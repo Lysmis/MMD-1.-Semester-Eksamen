@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Start lyd og captions ved klik
   const startPlayback = () => {
+	 // Sæt sessionStorage for fremtidige navigeringer
+    sessionStorage.setItem("audioStarted", "true");
     // Start lyd
     const playPromise = audio.play();
     if (playPromise !== undefined) {

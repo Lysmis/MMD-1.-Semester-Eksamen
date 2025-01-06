@@ -76,6 +76,7 @@ button img {
 input[type="range"] {
   	width: 20vh;
   	height: 1vh;
+	filter: invert(1); /* Inverterer farven på lydstyrke*/
 }
 .audio-controls {
   	margin-left: 7vh;
