@@ -26,14 +26,51 @@ body {
   overflow: hidden; /* Skjul alt, der går uden for skærmen */
   height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
 }
-
-h2 {
+a {/*links*/
+	text-decoration: none; /* Fjern understregning fra links */
+}
+h1 { /*GLaDOS*/
 	font-family: "Univers-UltraCondensed";
-	font-size: 18vh;
+	font-size: 16vh;
 	font-weight: 400;
 	text-align: center;
 	Color: white;
 }
+h5{
+	font-family: "Univers";
+	font-weight: 400;
+	font-size:3.7vh;
+	color: white;
+}
+h6{
+	font-family: "Univers";
+	font-weight: 400;
+	font-size: 3vh;
+	color: #ff9a00;
+	margin-bottom: 1vh;
+}
+.rating p{
+	font-size: 2.5vh;
+	color: #ff9a00;
+	margin-top: 1vh;
+}
+p {
+	font-family: "univers";
+	font-weight: 400;
+	font-size: 2.3vh;
+	color:white;
+}
+/* Breadcrumbs */
+.breadcrumbs p, a {
+	color: #ff5d00;
+	opacity: 0.8;
+	font-size: 2vh;
+}
+.breadcrumbs a:hover {
+	opacity:1;
+	color: #ff9a00;
+}
+
 
 /* Menu */
 .perspective-menu {
@@ -43,9 +80,9 @@ h2 {
 }
 .menu {
 	width: 22vh; height: 25vh;
-	background-color: rgba(55,70,73,1.00); 
+	background-color: rgba(55,70,73,0.4); 
 	border: 0.5vh solid white;
-	transform: rotateX(-10deg) rotateY(30deg) rotateZ(15deg) skewY(10.5deg);
+	transform: rotateX(-10deg) rotateY(30deg) rotateZ(15deg) skewY(11deg);
 }
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
@@ -53,12 +90,51 @@ h2 {
 	color:white;
 }
 .menu h5 {
-	font-family: "Univers";
-	font-size:3.7vh;
-	font-weight: 400;
 	text-align: left;
 	margin-left: 3vh;
 	padding: 0.5vh;
+}
+/*Textbox 1*/
+.perspective-text1 {
+	perspective: 40vw; /* Juster perspektivet */
+	position:absolute;
+	top:48vh; margin-left: 9vw;
+}
+.text1 {
+	width: 35vh; height: 30vh;
+	background-color: rgba(55,70,73,0.4); 
+	border: 0.3vh solid white;
+	transform: rotateX(0deg) rotateY(20deg) rotateZ(3deg) skewY(3deg);
+	padding: 2vh;
+	text-align: center;
+}
+/*Textbox 2*/
+.perspective-text2 {
+	perspective: 20vw; /* Juster perspektivet */
+	position:absolute;
+	top:15vh; margin-left: 68vw;
+}
+.text2 {
+	width: 34vh; height: 25vh;
+	background-color: rgba(55,70,73,0.4); 
+	border: 0.3vh solid white;
+	transform: rotateX(-5deg) rotateY(-30deg) rotateZ(-15deg) skewY(-11deg);
+	padding: 2vh;
+	text-align: center;
+}
+/*Textbox 3*/
+.perspective-text3 {
+	perspective: 30vw; /* Juster perspektivet */
+	position:absolute;
+	top:50vh; margin-left: 72vw;
+}
+.text3 {
+	width: 35vh; height: 28vh;
+	background-color: rgba(55,70,73,0.4); 
+	border: 0.3vh solid white;
+	transform: rotateX(0deg) rotateY(-20deg) rotateZ(-3deg) skewY(-3deg);
+	padding: 2vh;
+	text-align: center;
 }
 
 /* Audio controls */
@@ -87,7 +163,19 @@ input[type="range"] {
 .caption:nth-child(7) {animation-delay: 110s; }
 
 @media screen and (max-aspect-ratio:4/3){
-		
+
+h5{
+	font-size:3vh;
+}
+h6{
+	font-size: 2.5vh;
+}
+.rating p{
+	font-size: 2vh;
+}
+p {
+	font-size: 1.7vh;
+}
 /* Menu */
 .perspective-menu {
 	perspective: 30vw;
@@ -99,7 +187,88 @@ input[type="range"] {
 	transform: rotateX(0deg) rotateY(20deg) rotateZ(5deg) skewY(12deg);
 }
 .menu h5 {
-	font-size:3vh;
 	margin-left: 1vh;
 }
+/*Textbox 1*/
+.perspective-text1 {
+	perspective: 40vw; /* Juster perspektivet */
+	top:52vh; margin-left: 5vw;
+}
+.text1 {
+	width: 22vh; height: 25vh;
+	transform: rotateX(0deg) rotateY(20deg) rotateZ(0deg) skewY(5deg);
+}
+/*Textbox 2*/
+.perspective-text2 {
+	perspective: 30vw; 
+	top:25vh; margin-left: 72vw;
+}
+.text2 {
+	width: 21vh; height: 20vh;
+	transform: rotateX(-5deg) rotateY(-30deg) rotateZ(-8deg) skewY(-15deg);
+}
+/*Textbox 3*/
+.perspective-text3 {
+	perspective: 40vw;
+	top:52vh; margin-left: 75vw;
+}
+.text3 {
+	width: 20vh; height: 25vh;
+	transform: rotateX(0deg) rotateY(-20deg) rotateZ(0deg) skewY(-5deg);
+}
+}
+@media screen and (max-aspect-ratio:6/7){
+
+
+h6{
+	font-size: 1.7vh;
+}
+.rating p{
+	font-size: 1.4vh;
+}
+p {
+	font-size: 1.4vh;
+}	
+p{
+	text-shadow: 
+        -1px -1px 0 black,  /* Øverst venstre*/
+         1px -1px 0 black,  /* Øverst højre*/
+        -1px  1px 0 black,  /* Nederst venstre*/
+         1px  1px 0 black;  /* Nederst højre*/	
+	}
+.menu {
+	width: 15vh; height: 19vh;
+	border: 0.3vh solid white;
+	transform: rotateX(0deg) rotateY(20deg) rotateZ(5deg) skewY(20deg);
+}
+.perspective-text1 {
+	perspective: 40vw; /* Juster perspektivet */
+	top:56vh; margin-left: 1vw;
+}
+.text1 {
+	width: 17vh; height: 30vh;
+	transform: rotateX(0deg) rotateY(20deg) rotateZ(0deg) skewY(5deg);
+	border: 0vh;
+	background-color: rgba(55,70,73,0);	
+}
+.perspective-text2 {
+	perspective: 50vw; 
+	top:25vh; margin-left: 66vw;
+}
+.text2 {
+	width: 25vw; height: 19vh;
+	border: 0vh;
+	background-color: rgba(55,70,73,0);
+	transform: rotateX(-5deg) rotateY(-20deg) rotateZ(-5deg) skewY(-15deg);
+}
+.perspective-text3 {
+	perspective: 100vw;
+	top:70vh; margin-left: 34vw;
+}
+.text3 {
+	width: 60vw; height: 20vh;
+	border: 0vh;
+	background-color: rgba(55,70,73,0);
+	transform: rotateX(0deg) rotateY(-10deg) rotateZ(0deg) skewY(0deg);
+}	
 }
