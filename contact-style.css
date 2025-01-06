@@ -18,14 +18,87 @@
 
 /* Body styling */
 body {
-  background-image: url("img/contact Background.png");
-  background-color: rgba(55,70,73,1.00); /* Blå-Grå fallback */
-  background-repeat: no-repeat;
-  background-size: auto 100vh; /* Skaler kun i højden */
-  background-position: top left;
-  overflow: hidden; /* Skjul alt, der går uden for skærmen */
-  height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
+	background-image: url("img/contact Background.png");
+	background-color: rgba(55,70,73,1.00); /* Blå-Grå fallback */
+	background-repeat: no-repeat;
+	background-size: auto 100vh; /* Skaler kun i højden */
+	background-position: top left;
+	overflow: hidden; /* Skjul alt, der går uden for skærmen */
+	height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
 }
+/*text-styling*/
+h4 { /*contact*/
+	font-family: "Univers-ultracondensed";
+	font-size: 7vh;
+}
+h5 { /*menu*/
+	font-family: "Univers";
+	font-size:5vh;
+	font-weight: 400;
+	text-align: left;
+	margin-left: 3vh;
+	padding-bottom: 1vh;
+	color:white;
+}
+h6 { /*headline textbox*/
+	font-family: "univers";
+	color: white;
+	font-size: 4vh;
+	margin: 1.5vh 0vh;}
+p { /*text*/
+	font-family: "univers";
+	color: white;
+	font-size: 2.2vh;
+}
+a {/*links*/
+	text-decoration: none; /* Fjern understregning fra links */
+}
+.textbox1 a{
+	color: #ff9a00;
+}
+.textbox2 a{
+	color: #ff9a00;
+}
+/* Breadcrumbs */
+.breadcrumbs a {
+	color: #ff5d00;
+	opacity: 0.8;
+	font-size: 2vh;
+}
+.breadcrumbs p {
+	color: #ff5d00;
+	opacity: 0.8;
+	font-size: 2vh;
+}
+.breadcrumbs a:hover {
+	opacity:1;
+	color: #ff9a00;
+}
+
+/*Textbox*/
+.textbox1{
+	width: 50vh;
+	height: 22vh;
+	background-color: rgba(0,0,0,0.60);
+	border: 0.3vh solid #ff5d00;
+	border-radius: 1vh;
+	position: absolute;
+	top: 15vh;
+	left: 50vh;
+	padding: 2vh;
+}
+.textbox2{
+	width: 50vh;
+	height: 16vh;
+	background-color: rgba(0,0,0,0.60);
+	border: 0.3vh solid #ff5d00;
+	border-radius: 1vh;
+	position: absolute;
+	top: 67vh;
+	left: 50vh;
+	padding: 2vh;
+}
+
 /* Contact */
 .perspective-contact {
 	perspective: 30vh; /* Juster perspektivet */
@@ -48,23 +121,16 @@ body {
 	display: flex; /*menupunkterne står under hinanden*/
 	justify-content: center;
 	align-items: center;
-	text-decoration: none; /* Fjern understregning fra links */
 	color:white;
 	gap: 6vh; /* Mellemrum mellem ikonet og teksten */
 	padding-top: 3.5vh;
 	padding-bottom: 5.5vh;
-	
-}
-h4 {
-	font-family: "Univers";
-	font-size: 6vh;
 }
 .icon{
 	width: 8vh;
 	height: 8vh;
 	filter: invert(1); /* Inverterer farven på mute-ikon så den bliver hvid */
 }
-
 
 /* Logo */
 .perspective-logo {
@@ -82,6 +148,7 @@ h4 {
 	width: 100%;
 	height: 100%;
 	transform:inherit;
+	opacity: 0.6;
 }
 /* Menu */
 .perspective-menu {
@@ -98,21 +165,13 @@ h4 {
 	transform: rotateY(15deg) skewY(0deg); /* Gør området skævt*/ 
 }
 .menu-links{
-	margin-top: 3vh;
+	margin-top: 6vh;
 }
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
-	text-decoration: none; /* Fjern understregning fra links */
 	color:white;
 }
-.menu h5 {
-	font-family: "Univers";
-	font-size:5vh;
-	font-weight: 400;
-	text-align: left;
-	margin-left: 5vh;
-	padding-bottom: 1vh;
-}
+
 
 /* Audio controls */
 button img {
@@ -126,7 +185,7 @@ input[type="range"] {
 }
 .audio-controls {
   	margin-left: 2vh;
-	margin-top: 0vh;
+	margin-top: 3vh;
 }
 
 
@@ -140,11 +199,41 @@ input[type="range"] {
 
 
 @media screen and (max-aspect-ratio:4/3){
-	body {
-		background-image: url("img/contact Background portrait.png");
-	 	background-position: top -20vw center;
-		background-size: 100vw auto ;}
+body {
+	background-image: url("img/contact Background portrait.png");
+	background-position: top -20vw center;
+	background-size: 100vw auto ;
+}
+h4 { /*contact*/
+	font-size: 4vw;
+}	
+h5 { /*menu*/
+	font-size:3vw;
+	margin-left: 3vw;
+	padding-bottom: 0.5vw;
+}
+h6 { /*textbox*/
+	font-size: 2.5vw;
+	margin: 1vw 0vw;
+	}	
+p {
+	font-size: 2vw;
+	}
 
+/*textbox*/	
+.textbox1{
+	width: 33vw;
+	height: 22vw;
+	top: 6vw;
+	left: 29vw;
+}
+.textbox2{
+	width: 33vw;
+	height: 20vw;
+	top: 40vw;
+	left: 29vw;
+}
+	
 /* Contact */
 .perspective-contact {
 	perspective: 20vw; /* Juster perspektivet */
@@ -163,14 +252,13 @@ input[type="range"] {
 	padding-top: 1.5vw;
 	padding-bottom: 4.5vw;
 }
-h4 {
-	font-size: 4vw;
+.call, .mail, facebook-icon, x-icon, linkedin-icon:hover {
+    color: #ff5d00;
 }
 .icon{
 	width: 5vw;
 	height: 5vw;
 }
-
 
 /* Logo */
 .perspective-logo {
@@ -193,11 +281,7 @@ h4 {
 .menu-links{
 	margin-top: 2vw;
 }	
-.menu h5 {
-	font-size:3vw;
-	margin-left: 3vw;
-	padding-bottom: 0.5vw;
-}
+
 
 /* Audio controls */
 button img {
@@ -211,4 +295,34 @@ input[type="range"] {
 .audio-controls {
   	margin-left: 1vw;
 }	
+}
+@media screen and (max-aspect-ratio:3/4){
+
+body {
+	background-image: url("img/contact Background portrait.png");
+	background-position: top 0vw center;
+	background-size: 100vw auto ;
+}
+p {
+	font-size: 2.2vw;
+	}
+/*textbox*/	
+.textbox1{
+	top: 16vw;
+}
+.textbox2{
+	top: 75vw;
+}
+/* Contact */
+.perspective-contact {
+	top: 38vw; 
+}
+/* Logo */
+.perspective-logo {
+	top: 20vw; 
+}
+/* Menu */
+.perspective-menu {
+	top: 48vw;
+}
 }
