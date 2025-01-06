@@ -34,6 +34,16 @@ h5 {
 	font-size:5vh;
 	font-weight: 400;
 }
+/* Breadcrumbs */
+.breadcrumbs p, a {
+	color: darkred;
+	opacity: 1;
+	font-size: 2vh;
+}
+.breadcrumbs a:hover {
+	opacity:1;
+	color: #ff5d00;
+}
 
 /* Menu */
 .perspective-menu {
