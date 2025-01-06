@@ -30,13 +30,19 @@ body {
 
 /* Start-knap */
 .overlay {
+	Background-color: rgba(0,0,0,0.6);
+	height: 100%;
+	width: 100%;
+	Position: absolute;
+	
+}
+.start{
 	position: fixed;
-	top: 4vh;
-	left: 2vw;
-	width: 96vw;
-	height: 92vh;
+	top: 50vh;
+	left: 0vw;
+	width: 100vw;
+	height: 40vh;
     background: linear-gradient(0deg, rgba(50, 50, 50), rgba(200, 200, 200), rgba(255, 255, 255),rgba(255, 255, 255), rgba(200, 200, 200), rgba(50, 50, 50));
-    border-radius: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
     display:flex;
     justify-content: center;
@@ -51,8 +57,8 @@ body {
 .start-image {
     width: auto; /* Behold aspect ratio */
     height: auto; 
-    max-width: 85vw; 
-    max-height: 85vh; 
+    max-width: 60vw; 
+    max-height: 40vh; 
 }
 .overlay.hidden {
     opacity: 0; /* Gør elementet usynligt */
