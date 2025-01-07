@@ -154,13 +154,27 @@ input[type="range"] {
 }
 
 /* Captions timing */
-.caption:nth-child(1) {animation-delay: 0s; }
-.caption:nth-child(2) {animation-delay: 15s; }
-.caption:nth-child(3) {animation-delay: 30s; }
-.caption:nth-child(4) {animation-delay: 75s; }
-.caption:nth-child(5) {animation-delay: 90s; }
-.caption:nth-child(6) {animation-delay: 110s; }
-.caption:nth-child(7) {animation-delay: 110s; }
+.captions-box.play-captions .caption:nth-child(1) {
+  animation-delay: 4s; }
+.captions-box.play-captions .caption:nth-child(2) {
+  animation-delay: 13s; }
+.captions-box.play-captions .caption:nth-child(3) {
+  animation-delay: 22s; }
+.captions-box.play-captions .caption:nth-child(4) {
+  animation-delay: 32s; }
+.captions-box.play-captions .caption:nth-child(5) {
+  animation-delay: 41s; }
+.captions-box.play-captions .caption:nth-child(6) {
+  animation-delay: 55s; }
+.captions-box.play-captions .caption:nth-child(7) {
+  animation-delay: 64s; }
+.captions-box.play-captions .caption:nth-child(8) {
+  animation-delay: 73s; }
+.captions-box.play-captions .caption:nth-child(9) {
+  animation-delay: 84s; }
+.captions-box.play-captions .caption:nth-child(10) {
+  animation-delay: 93s; }
+
 
 @media screen and (max-aspect-ratio:4/3){
 

@@ -56,14 +56,14 @@ input[type="range"] {
 	position: absolute;
 }
 .captions-box.play-captions .caption {
-  animation: fadeInOut 10s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
+  animation: fadeInOut 9s linear forwards; /*tid for hele animationssekvensen, sikrer at den kun afspiller en enkelt gang*/
 }
-
 /* Animation */
 @keyframes fadeInOut {
 	10%, 90% {opacity: 1;} /*er fuldt synlig*/
 	0%, 100% {opacity: 0;} /*er usynlig*/
     }
+
 
 @media screen and (max-aspect-ratio:4/3){
 	

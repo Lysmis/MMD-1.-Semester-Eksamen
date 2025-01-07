@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const startButton = document.getElementById("startButton");
   const audio = document.getElementById("audioPlayer");
-  const captions = document.querySelectorAll(".caption");
+  const captionsBox = document.querySelector(".captions-box");
   const muteButton = document.getElementById("muteButton");
   const muteIcon = document.getElementById("muteIcon");
   const volumeSlider = document.getElementById("volumeSlider");
@@ -10,33 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
   audio.muted = true;
   muteIcon.src = "img/volume-off.svg"; // Ikon viser, at lyden er mutet
 
-  // Start captions-sekvens efter klik
-  const startCaptions = () => {
-    let delay = 0;
-    captions.forEach((caption) => {
-      setTimeout(() => {
-        caption.style.transition = "opacity 1s";
-        caption.style.opacity = "1"; // Fade ind
-        setTimeout(() => {
-          caption.style.opacity = "0"; // Fade ud
-        }, 14000); // Forbliv synlig i 14 sekunder
-      }, delay);
-      delay += 15000; // 15 sekunders interval mellem captions
-    });
-  };
-
   // Start lyd og captions ved klik
   const startPlayback = () => {
-	 // Sæt sessionStorage for fremtidige navigeringer
+    // Sæt sessionStorage for fremtidige navigeringer
     sessionStorage.setItem("audioStarted", "true");
+
     // Start lyd
     const playPromise = audio.play();
     if (playPromise !== undefined) {
       playPromise.catch((error) => console.error("Playback error:", error));
     }
 
-    // Start captions-sekvens
-    startCaptions();
+    // Tilføj klassen for at starte CSS-animationer
+    captionsBox.classList.add("play-captions");
 
     // Fade-out overlay
     startButton.classList.add("hidden");

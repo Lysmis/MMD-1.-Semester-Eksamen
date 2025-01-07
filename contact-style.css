@@ -19,9 +19,9 @@
 /* Body styling */
 body {
 	background-image: url("img/contact Background.png");
-	background-color: rgba(55,70,73,1.00); /* Blå-Grå fallback */
+	background-color: rgba(60,70,73,1.00); /* Blå-Grå fallback */
 	background-repeat: no-repeat;
-	background-size: auto 100vh; /* Skaler kun i højden */
+	background-size: auto 100vh; 
 	background-position: top left;
 	overflow: hidden; /* Skjul alt, der går uden for skærmen */
 	height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
@@ -42,13 +42,13 @@ h5 { /*menu*/
 }
 h6 { /*headline textbox*/
 	font-family: "univers";
-	color: white;
-	font-size: 4vh;
+	color: #ff9a00;
+	font-size: 3vh;
 	margin: 1.5vh 0vh;}
 p { /*text*/
 	font-family: "univers";
 	color: white;
-	font-size: 2.2vh;
+	font-size: 2vh;
 }
 a {/*links*/
 	text-decoration: none; /* Fjern understregning fra links */
@@ -77,48 +77,46 @@ a {/*links*/
 
 /*Textbox*/
 .textbox1{
-	width: 50vh;
+	width: 27vh;
 	height: 22vh;
-	background-color: rgba(0,0,0,0.60);
-	border: 0.3vh solid #ff5d00;
+	background-color: rgba(0,0,0,0.40);
 	border-radius: 1vh;
 	position: absolute;
-	top: 15vh;
-	left: 50vh;
+	top: 13vh;
+	left: 43vh;
 	padding: 2vh;
 }
 .textbox2{
-	width: 50vh;
-	height: 16vh;
-	background-color: rgba(0,0,0,0.60);
-	border: 0.3vh solid #ff5d00;
+	width: 30vh;
+	height: 22vh;
+	background-color: rgba(0,0,0,0.40);
 	border-radius: 1vh;
 	position: absolute;
-	top: 67vh;
-	left: 50vh;
+	top: 13vh;
+	left: 77vh;
 	padding: 2vh;
 }
 
 /* Contact */
 .perspective-contact {
-	perspective: 30vh; /* Juster perspektivet */
+	perspective: 30vh; 
 	position:absolute;
-	top: 19vh; margin-left: 115vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	
+	top: 19vh; margin-left: 115vh;
 }
 .contact {
-	width: 35vh; height: 53vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	background-color: rgba(255,0,0,0); /*gennemsigtigt*/
-	transform: rotateY(-20deg) skewY(-7deg); /* Gør området skævt*/
+	width: 35vh; height: 53vh; 
+	background-color: rgba(255,0,0,0); 
+	transform: rotateY(-20deg) skewY(-7deg); 
 }
 .call, .mail, .socials {
-	display: flex; /* Brug flexbox til at arrangere elementerne i en række */
-	flex-direction: row; /* Sørg for, at de er side om side */
+	display: flex; 
+	flex-direction: row;
 	align-items: flex-start;
-	gap: 2vh; /* Mellemrum mellem ikonet og teksten */
+	gap: 2vh; 
 	padding-left: 2vh;
 }
 .contact a {
-	display: flex; /*menupunkterne står under hinanden*/
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	color:white;
@@ -134,15 +132,15 @@ a {/*links*/
 
 /* Logo */
 .perspective-logo {
-	perspective: 30vh; /* Juster perspektivet */
+	perspective: 30vh; 
 	position:absolute;
-	top: -3vh; margin-left: 113vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/	
+	top: -3vh; margin-left: 113vh; 
 }
 .logo {
 	position: relative;
-	width: 40vh; height: 18vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	background-color: rgba(255,0,0,0); /*gennemsigtigt*/
-	transform: rotateY(-20deg) skewY(-25deg); /* Gør området skævt*/
+	width: 40vh; height: 18vh; 
+	background-color: rgba(255,0,0,0); 
+	transform: rotateY(-20deg) skewY(-25deg); 
 }
 #portal-logo{
 	width: 100%;
@@ -152,17 +150,17 @@ a {/*links*/
 }
 /* Menu */
 .perspective-menu {
-	perspective: 100vh; /* Juster perspektivet */
+	perspective: 100vh; 
 	position:absolute;
-	top: 31vh; margin-left: 6vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	top: 31vh; margin-left: 6vh;
 }
 .menu {
-	width: 33vh; height: 46vh;/*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	width: 33vh; height: 46vh;
 	background-image: url("img/Portal Gun.png");
 	background-size: cover;
-	background-color: rgba(255,255,255,0.7); /*gennemsigtigt*/
+	background-color: rgba(255,255,255,0.7); 
 	border: 0.5vh solid rgba(100,100,100,1.00);
-	transform: rotateY(15deg) skewY(0deg); /* Gør området skævt*/ 
+	transform: rotateY(15deg) skewY(0deg); 
 }
 .menu-links{
 	margin-top: 6vh;
@@ -190,12 +188,19 @@ input[type="range"] {
 
 
 /* Captions timing */
-.caption:nth-child(1) {animation-delay: 3s; }
-.caption:nth-child(2) {animation-delay: 25s; }
-.caption:nth-child(3) {animation-delay: 50s; }
-.caption:nth-child(4) {animation-delay: 75s; }
-.caption:nth-child(5) {animation-delay: 90s; }
-.caption:nth-child(6) {animation-delay: 110s; }
+.captions-box.play-captions .caption:nth-child(1) {
+  animation-delay: 3s; }
+.captions-box.play-captions .caption:nth-child(2) {
+  animation-delay: 12s; }
+.captions-box.play-captions .caption:nth-child(3) {
+  animation-delay: 21s; }
+.captions-box.play-captions .caption:nth-child(4) {
+  animation-delay: 35s; }
+.captions-box.play-captions .caption:nth-child(5) {
+  animation-delay: 44s; }
+.captions-box.play-captions .caption:nth-child(6) {
+  animation-delay: 62s; }
+
 
 
 @media screen and (max-aspect-ratio:4/3){
@@ -226,22 +231,25 @@ p {
 	height: 22vw;
 	top: 6vw;
 	left: 29vw;
+	padding: 2vw;
 }
 .textbox2{
 	width: 33vw;
 	height: 20vw;
 	top: 40vw;
 	left: 29vw;
+	padding: 2vw;
+	padding-top: 2vw;
 }
 	
 /* Contact */
 .perspective-contact {
-	perspective: 20vw; /* Juster perspektivet */
+	perspective: 20vw; 
 	top: 21vw; margin-left: 72vw;	
 }
 .contact {
 	width: 23vw; height: 35vw; 
-	transform: rotateY(-20deg) skewY(-6deg); /* Gør området skævt*/
+	transform: rotateY(-20deg) skewY(-6deg); 
 }
 .call, .mail, .socials {
 	gap: 1vw; 
@@ -296,7 +304,7 @@ input[type="range"] {
   	margin-left: 1vw;
 }	
 }
-@media screen and (max-aspect-ratio:3/4){
+@media screen and (max-aspect-ratio:5/6){
 
 body {
 	background-image: url("img/contact Background portrait.png");

@@ -28,7 +28,14 @@ body {
   	overflow: hidden; /* Skjul alt, der går uden for skærmen */
   	height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
 }
-
+a{	
+	text-decoration: none; /* Fjern understregning fra links */
+}
+h3 { /*menu*/
+	font-family: "wrong";
+	font-size:9vh;
+	font-weight: 400;
+}
 h5 {
 	font-family: "wrong";
 	font-size:5vh;
@@ -58,12 +65,7 @@ h5 {
 }
 .menu a {
 	display: block; /*menupunkterne står under hinanden*/
-	text-decoration: none; /* Fjern understregning fra links */
 	color: rgba(0,0,0,0.75);
-}
-.menu h5 {
-	font-size:9vh;
-	font-weight: 400;
 }
 .home	{
 	margin-left: 2vh;
@@ -107,18 +109,31 @@ input[type="range"] {
 }
 
 /* Captions timing */
-.caption:nth-child(1) {animation-delay: 3s; }
-.caption:nth-child(2) {animation-delay: 25s; }
-.caption:nth-child(3) {animation-delay: 50s; }
-.caption:nth-child(4) {animation-delay: 75s; }
-.caption:nth-child(5) {animation-delay: 90s; }
-.caption:nth-child(6) {animation-delay: 110s; }
+.captions-box.play-captions .caption:nth-child(1) {
+  animation-delay: 4s; }
+.captions-box.play-captions .caption:nth-child(2) {
+  animation-delay: 15s; }
+.captions-box.play-captions .caption:nth-child(3) {
+  animation-delay: 24s; }
+.captions-box.play-captions .caption:nth-child(4) {
+  animation-delay: 33s; }
+.captions-box.play-captions .caption:nth-child(5) {
+  animation-delay: 42s; }
+.captions-box.play-captions .caption:nth-child(6) {
+  animation-delay: 51s; }
+.captions-box.play-captions .caption:nth-child(7) {
+  animation-delay: 60s; }
+.captions-box.play-captions .caption:nth-child(8) {
+  animation-delay: 69s; }
 
 
 @media screen and (max-aspect-ratio:4/3){
-	body {
+
+body {
 		background-size: auto 100vh;}
-	
+h3 {
+	font-size:7.5vh;
+	}	
 	/* Menu */
 .perspective-menu {
 	top:4vh; margin-left: 2vh; 
@@ -127,9 +142,6 @@ input[type="range"] {
 	width: 43vh; height: 62vh;
 	transform: rotateY(35deg) skewY(-1deg); /* Gør området skævt*/ 
 }
-.menu h5 {
-	font-size:7.5vh;
-	}
 .audio-controls {
   	margin-left: 2vh;
 	margin-top: 20vh;

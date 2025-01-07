@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const audio = document.getElementById("audioPlayer");
-  const captions = document.querySelectorAll(".caption");
+  const captionsBox = document.querySelector(".captions-box");
   const muteButton = document.getElementById("muteButton");
   const muteIcon = document.getElementById("muteIcon");
   const volumeSlider = document.getElementById("volumeSlider");
@@ -19,26 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     audio.play()
       .then(() => {
         console.log("Audio started playing.");
-        startCaptions();
+        captionsBox.classList.add("play-captions"); // Tilføj klassen for at starte CSS-animationer
       })
       .catch((error) => {
         console.error("Playback error:", error);
       });
   };
-
-  // Start captions-sekvens
-  function startCaptions() {
-    let delay = 0;
-    captions.forEach((caption, index) => {
-      setTimeout(() => {
-        caption.style.opacity = "1"; // Fade ind
-        setTimeout(() => {
-          caption.style.opacity = "0"; // Fade ud
-        }, 14000); // Vis caption i 14 sekunder
-      }, delay);
-      delay += 15000; // 15 sekunder mellem captions
-    });
-  }
 
   // Mute/unmute funktion
   const toggleMute = () => {
