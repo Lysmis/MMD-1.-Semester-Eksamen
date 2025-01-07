@@ -10,6 +10,10 @@
 	font-family: "Univers";
 	src: url("font/UniversLTStd.woff");
 }
+@font-face {
+	font-family: "Univers-Black";
+	src: url("font/UniversLTStd-BlackObl.woff");
+}
 
 /* Reset */
 * {
@@ -32,8 +36,8 @@ h4 { /*contact*/
 	font-size: 7vh;
 }
 h5 { /*menu*/
-	font-family: "Univers";
-	font-size:5vh;
+	font-family: "Univers-Black";
+	font-size:4.5vh;
 	font-weight: 400;
 	text-align: left;
 	margin-left: 3vh;
@@ -120,7 +124,7 @@ a {/*links*/
 	justify-content: center;
 	align-items: center;
 	color:white;
-	gap: 6vh; /* Mellemrum mellem ikonet og teksten */
+	gap: 4vh; /* Mellemrum mellem ikonet og teksten */
 	padding-top: 3.5vh;
 	padding-bottom: 5.5vh;
 }
@@ -213,7 +217,7 @@ h4 { /*contact*/
 	font-size: 4vw;
 }	
 h5 { /*menu*/
-	font-size:3vw;
+	font-size:2.8vw;
 	margin-left: 3vw;
 	padding-bottom: 0.5vw;
 }
