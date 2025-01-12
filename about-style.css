@@ -107,6 +107,21 @@ input[type="range"] {
 .warning-text {
 	transform: rotateX(50deg) skewY(-12deg); /* Gør området skævt*/ 
 }
+/* Video */
+.video-container {
+    width: 55vh;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+	position: absolute;
+    top: 2vh;
+    left: 58vw;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* Captions timing */
 .captions-box.play-captions .caption:nth-child(1) {
@@ -130,25 +145,117 @@ input[type="range"] {
 @media screen and (max-aspect-ratio:4/3){
 
 body {
-		background-size: auto 100vh;}
-h3 {
-	font-size:7.5vh;
-	}	
-	/* Menu */
+	background-image: url("img/about Background portrait.png");
+	background-size: 100vw auto;
+  	height: auto; 
+	width: 100vw;
+}
+h3 { /*menu*/
+	font-size:5vw;
+}
+h5 { /*warning*/
+	font-size:5.5vw;
+}
+/* Breadcrumbs */
+.breadcrumbs p, a {
+	font-size: 3vw;
+}
+/* Menu */
 .perspective-menu {
-	top:4vh; margin-left: 2vh; 
+	perspective: 28vw; 
+	top:5vw; margin-left: 3vw;
 }
 .menu {
-	width: 43vh; height: 62vh;
-	transform: rotateY(35deg) skewY(-1deg); /* Gør området skævt*/ 
+	width: 30vw; height: 46vw;
+	transform: rotateY(29deg) skewY(0deg); 
+}
+.home	{
+	margin-left: 1vw;
+}
+.investors	{
+	margin-left: 13vw;
+	margin-top: 1vw;
+}
+.contact	{
+	margin-left: 5vw;
+}
+/* Audio controls */
+button img {
+  	width: 7vw;
+  	height: 7vw;
+}
+input[type="range"] {
+  	width: 16vw;
 }
 .audio-controls {
-  	margin-left: 2vh;
-	margin-top: 20vh;
+  	margin-left: 1vw;
+	margin-top: 15vw;
 }
 .warning{
-	top: 62vh; 
-	margin-left: 40vh;
+	top: 53vw; 
+	margin-left: 25vw;
+	perspective: 200vw;
+}
+/* Video */
+.video-container {
+    width: 50vw;
+    top: 2vw;
+    left: 48vw;
+}
 }
 
+@media screen and (max-aspect-ratio:2/3){
+	
+body {
+	background-image: url("img/about Background phone.png");	
+}
+h3 { /*menu*/
+	font-size:8vw;
+}
+h5 { /*warning*/
+	font-size:8vw;
+}
+/* Breadcrumbs */
+.breadcrumbs p, a {
+	font-size: 4vw;
+}
+/* Menu */
+.perspective-menu {
+	perspective: 42vw; 
+}
+.menu {
+	width: 45vw; height: 75vw;
+}
+.home	{
+	margin-left: 2vw;
+}
+.investors	{
+	margin-left: 18vw;
+	margin-top: 2vw;
+}
+.contact	{
+	margin-left: 7vw;
+}
+/* Audio controls */
+button img {
+  	width: 9vw;
+  	height: 9vw;
+}
+input[type="range"] {
+  	width: 25vw;
+}
+.audio-controls {
+  	margin-left: 2vw;
+	margin-top: 24vw;
+}
+.warning{
+	top: 66vw; 
+	margin-left: 35vw;
+}
+	/* Video */
+.video-container {
+    width: 80vw;
+    top: 98vw;
+    left: 10vw;
+}
 }

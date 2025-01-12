@@ -221,7 +221,7 @@ h5 { /*menu*/
 	margin-left: 3vw;
 	padding-bottom: 0.5vw;
 }
-h6 { /*textbox*/
+h6 { /*textbox headline*/
 	font-size: 2.5vw;
 	margin: 1vw 0vw;
 	}	
@@ -337,4 +337,44 @@ p {
 .perspective-menu {
 	top: 48vw;
 }
+}
+
+@media screen and (max-aspect-ratio:2/3){
+	
+body {
+	background-image: url("img/contact Background phone.png");
+}
+h6 { /*textbox headline*/
+	font-size: 3.5vw;
+	margin-bottom: 2.5vw;
+	}	
+p {
+	font-size: 3vw;
+	}
+/*textbox*/	
+.textbox1{
+	top: 85vw;
+	left: 15vw;
+	height: 31vw;
+	width: 70vw;
+}
+.textbox2{
+	top: 123vw;
+	left: 15vw;
+	height: 23vw;
+	width: 70vw;
+}
+/* Contact */
+.perspective-contact {
+	top: 42vw; 
+}
+/* Logo */
+.perspective-logo {
+	top: 24vw; 
+}
+/* Menu */
+.perspective-menu {
+	top: 52vw;
+}	
+	
 }

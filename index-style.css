@@ -24,15 +24,16 @@ body {
 	background-size: auto 100vh;
 	background-position: left top;
 	overflow: hidden; /* Skjul alt, der går uden for skærmen */
-  	height: 100vh; /* Sørg for, at body altid fylder hele højden af vinduet */
+  	height: 100vh;
+	width: 100vw;
 	
 }
 
 /* Start-knap */
 .overlay {
 	Background-color: rgba(0,0,0,0.6);
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 	Position: absolute;
 	
 }
@@ -47,8 +48,6 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    font-size: 2rem;
     z-index: 10;
     cursor: pointer;  
     opacity: 1; /* Synligt ved start */
@@ -57,7 +56,7 @@ body {
 .start-image {
     width: auto; /* Behold aspect ratio */
     height: auto; 
-    max-width: 60vw; 
+    max-width: 80vw; 
     max-height: 40vh; 
 }
 .overlay.hidden {
@@ -67,7 +66,7 @@ body {
 
 /* Logo */
 .perspective-logo {
-	perspective: 40vh; /* Juster perspektivet */
+	perspective: 40vh; 
 	position:absolute;
 	top: 4vh; margin-left: 48vh; /*baseret på højde, da baggrund kun skallerer der*/	
 }
@@ -84,17 +83,17 @@ body {
 }
 /* Menu */
 .perspective-menu {
-	perspective: 110vh; /* Juster perspektivet */
+	perspective: 110vh; 
 	position:absolute;
-	top:17vh; margin-left: 9.3vh; /*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
+	top:17vh; margin-left: 9.3vh; 
 }
 .menu {
-	width: 38vh; height: 55vh;/*baseret på skærmens højde, da baggrundsbillede ikke skallerer ved ændring i bredde*/
-	background-color: rgba(255,255,255,0); /*gennemsigtigt*/
-	transform: rotateY(37deg) skewY(5.5deg); /* Gør området skævt*/ 
+	width: 38vh; height: 55vh;
+	background-color: rgba(255,255,255,0); 
+	transform: rotateY(37deg) skewY(5.5deg);
 }
 .menu a {
-	display: block; /*menupunkterne står under hinanden*/
+	display: block; 
 	text-decoration: none; /* Fjern understregning fra links */
 	color:black;
 }
@@ -158,11 +157,56 @@ input[type="range"] {
 		background-image: url("img/index Background Help portrait.jpg");}
 	.perspective-logo {
 		perspective: 30vh; 
-		top: 11vh; margin-left: 44vh;}
+		top: 8vh; margin-left: 46vh;}
 	.logo {
 		width: 36vh; height: 25vh;
 		transform: rotateY(-25deg) skewY(-30deg);}
 	.perspective-menu {
 		top:17vh;
 		margin-left: 2vh;}
+}
+@media screen and (max-aspect-ratio:2/3){
+	
+	body {
+		background-image: url("img/index Background Help phone.png");
+		background-size: 100vw auto;
+	}
+	.start{
+		top: 100vw;
+		height: 60vw;	}
+	.start-image {
+		max-height: 60vw; 	}
+
+	/* Logo */
+	.perspective-logo {
+		perspective: 30vw; 
+		top: 12vw; margin-left: 54vw; 	}
+	.logo {
+		width: 40vw; height: 25vw; 
+		transform: rotateY(-25deg) skewY(-32deg); }
+	/* Menu */
+	.perspective-menu {
+		perspective: 110vw; 
+		top:23vw; margin-left: 4vw; 	}
+	.menu {
+		width: 44vw; height: 63vw;
+		transform: rotateY(30deg) skewY(5deg);	}
+	.menu h2 {
+		font-size: 25vw;
+		margin-bottom: 2vw;	}
+	.menu h5 {
+		font-size:4.1vw;
+		margin-left: 5vw;
+		padding: 0.5vw;	}
+
+	/* Audio controls */
+	button img {
+		width: 7vw;
+		height: 7vw;	}
+	input[type="range"] {
+		width: 22vw;
+		height: 1vw;	}
+	.audio-controls {
+		margin-left: 5vw;
+		margin-top: 1vw;	}
 }
