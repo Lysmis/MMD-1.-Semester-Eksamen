@@ -152,7 +152,7 @@ input[type="range"] {
 
 
 
-@media screen and (max-aspect-ratio:1){
+@media screen and (max-aspect-ratio:9/8){
 	body {
 		background-image: url("img/index Background Help portrait.jpg");}
 	.perspective-logo {
@@ -165,18 +165,17 @@ input[type="range"] {
 		top:17vh;
 		margin-left: 2vh;}
 }
-@media screen and (max-aspect-ratio:2/3){
+@media screen and (max-aspect-ratio:5/6){
 	
 	body {
 		background-image: url("img/index Background Help phone.png");
 		background-size: 100vw auto;
 	}
+	/* Overlay */
 	.start{
-		top: 100vw;
-		height: 60vw;	}
+		top: 60vw;}
 	.start-image {
 		max-height: 60vw; 	}
-
 	/* Logo */
 	.perspective-logo {
 		perspective: 30vw; 
@@ -198,7 +197,6 @@ input[type="range"] {
 		font-size:4.1vw;
 		margin-left: 5vw;
 		padding: 0.5vw;	}
-
 	/* Audio controls */
 	button img {
 		width: 7vw;
